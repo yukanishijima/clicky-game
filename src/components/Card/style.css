@@ -1,0 +1,16 @@
+.image-card {
+  width: 100px;
+  display: inline-block;
+  margin: 3px;
+}
+
+.image-card > img {
+  width: 100%;
+  border: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+.image-card > img:hover {
+  transform: scale(1.2);
+  border: 5px solid black;
+}
+

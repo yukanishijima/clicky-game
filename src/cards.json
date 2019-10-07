@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "bats",
+    "image": "./images/bats_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "name": "candle",
+    "image": "./images/candle_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "name": "candy",
+    "image": "./images/candy_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "name": "cat",
+    "image": "./images/cat_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "name": "coffin",
+    "image": "./images/coffin_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "name": "ghost",
+    "image": "./images/ghost_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "name": "hat",
+    "image": "./images/hat_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "name": "pumpkin",
+    "image": "./images/pumpkin_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "name": "scull-candle",
+    "image": "./images/scull-candle_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "name": "spooky-church",
+    "image": "./images/spooky-church_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "name": "stone",
+    "image": "./images/stone_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "name": "witch",
+    "image": "./images/witch_600.jpg",
+    "clicked": false
+  }
+]
