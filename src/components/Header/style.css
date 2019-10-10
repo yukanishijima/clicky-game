@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i,300|Raleway:300,400);
 
 :root {
   /* Set neon color */
@@ -6,11 +6,8 @@
   --neon-border-color: #08f;
 }
 
-body {
-  font-family: 'Exo 2', sans-serif;
-}
-
 h1 {
+  font-family: 'Exo 2', sans-serif;
   font-size: 26px;
   line-height:1.2em;
   font-weight: 200;
@@ -20,7 +17,7 @@ h1 {
   border: 0.15rem solid #fff;
   border-radius: 1rem;
   width: 230px;
-  margin: 6px auto;
+  margin: 10px auto;
   text-transform: uppercase;
   animation: flicker 1.5s infinite alternate;     
 }
@@ -70,15 +67,77 @@ h1:focus {
 
 
 
+/* message */
+#msg {
+  font-size: 16px;
+  margin: 20px 0;
+  font-style: italic;
+}
+.red {
+  animation: 0.5s color-red;
+  color: #f74848;
+}
+.pink {
+  animation: 0.5s color-pink;
+  color: #e890d9;
+}
+.white {
+  animation: 0.5s color-white;
+}
+@keyframes color-red {
+  from {
+    opacity: 0;}
+  to {
+    color: #f74848;
+    opacity: 1;}
+}
+@keyframes color-pink {
+  from {
+    opacity: 0;}
+  to {
+    color: #e890d9;
+    opacity: 1;}
+}
+@keyframes color-white {
+  from {
+    opacity: 0;}
+  to {
+    opacity: 1;}
+}
+
+/* score */
+.score { 
+  margin: 0 10px 10px;
+  border: 1.5px solid #c8caef;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+/* modal-btn */
+body {
+  position: relative;
+}
 .modal-btn {
-  color: #ce78a6;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* modal */
+.modal-btn {
+  color: #c8caef;
+  font-size: 20px;
   background: none;
   border: none;
 }
 .modal-content {
-  color: #f9ecef;
-  background: #a57ea5;
+  color: #dcadc6;
+  font-size: 16px;
+  font-style: italic;
+  background: #020f27;
   text-align: left;
+  border: 1px solid #dcadc6;
+  border-radius: 15px;
 }
 .modal-header {
   border-bottom: none;
@@ -86,7 +145,25 @@ h1:focus {
 .modal-footer {
   border-top: none;
 }
+.fas {
+  font-size: 0.8em;
+}
 .got-btn {
-  color: #f9ecef;
-  background: #c32bc3;
+  color: black;
+  background: #dcadc6;
+}
+.got-btn:hover {
+  background: #ce78a6;
+}
+.close-btn {
+  color: #dcadc6;
+}
+
+@media screen and (min-width: 520px) {
+  #msg {
+    font-size: 20px;
+  }
+  .modal-content {
+    font-size: 20px;
+  }
 }

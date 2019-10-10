@@ -1,8 +1,38 @@
 body {
-  color: #ce78a6;
+  /* color: #ce78a6; */
+  color: white;
   background-color: #0b1f44;
   text-align: center;
   min-height: 100vh;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
+.card-container {
+  margin: 20px auto;
+  width: 100vw;
+  max-width: 400px;
+}
+
+.shake {
+  -webkit-animation: shake 0.08s 5 linear alternate;
+  animation: shake 0.08s 5 linear alternate;
+}
+@-webkit-keyframes shake {
+  0% {-webkit-transform: rotate(-3deg);}
+  100% {-webkit-transform: rotate(3deg);}
+}
+@keyframes shake {
+  0% {transform: rotate(-3deg);}
+  100% {transform: rotate(3deg);}
+}
+
+
+@media screen and (min-width: 550px) {
+  .card-container {
+    width: 84vw;
+    max-width: 700px;
+  }
 }
 
 

@@ -25,10 +25,10 @@ class App extends Component {
     } else {
       console.log(`You Lost!`);
       this.setState({ message: `You Lost! Click any image to start over.` });
-
+      this.changeColor("red");
+      this.shake();
       this.resetGame();
       this.shuffle();
-      console.log(this.state.cards);
     }
   };
 
@@ -40,14 +40,16 @@ class App extends Component {
         score: newScore,
         message: `Yay, you won! Click any image to start over.`
       });
+      this.changeColor("pink");
       this.resetGame();
 
     } else {
       console.log(`You guessed correctly!`);
       this.setState({
         score: newScore,
-        message: `You guessed correctly! Keep guessing!`
+        message: `You guessed correctly. Keep guessing!`
       });
+      this.changeColor();
     }
 
     if (this.state.topScore < newScore) {
@@ -77,14 +79,43 @@ class App extends Component {
       return newObj;
     });
 
-    // console.log(newCards);
+    console.log(newCards);  //updated cards
     // console.log(this.state.cards);
     this.setState({
       score: 0,
       cards: newCards
     });
-    // console.log(this.state.cards);
+    console.log(this.state.cards); //why is it not updated?
   };
+
+  changeColor = (color) => {
+    document.querySelector("#msg").className = "";
+
+    switch (color) {
+      case "red":
+        document.querySelector("#msg").className = "red";
+        break;
+      case "pink":
+        document.querySelector("#msg").className = "pink";
+        break;
+      default:
+        document.querySelector("#msg").className = "white";
+        setTimeout(removeClass, 500);
+        function removeClass() {
+          document.querySelector("#msg").className = "";
+        };
+    };
+  };
+
+  shake = () => {
+    document.querySelector(".card-container").classList.add("shake");
+    setTimeout(removeClass, 500);
+    function removeClass() {
+      document.querySelector(".card-container").classList.remove("shake");
+    };
+  };
+
+
 
 
   render() {
@@ -95,6 +126,7 @@ class App extends Component {
         <div className="card-container">
           {this.state.cards.map(el => (
             <Card
+              changeColor={this.changeColor}
               cardClick={this.cardClick}
               id={el.id}
               key={el.id}
