@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "bats",
-    "image": "./images/bats_600.jpg",
+    "name": "broom",
+    "image": "./images/broom_600.jpg",
     "clicked": false
   },
   {
@@ -25,8 +25,8 @@
   },
   {
     "id": 5,
-    "name": "coffin",
-    "image": "./images/coffin_600.jpg",
+    "name": "eye",
+    "image": "./images/eye_600.jpg",
     "clicked": false
   },
   {
@@ -43,20 +43,20 @@
   },
   {
     "id": 8,
+    "name": "pot",
+    "image": "./images/pot_600.jpg",
+    "clicked": false
+  },
+  {
+    "id": 9,
     "name": "pumpkin",
     "image": "./images/pumpkin_600.jpg",
     "clicked": false
   },
   {
-    "id": 9,
-    "name": "scull-candle",
-    "image": "./images/scull-candle_600.jpg",
-    "clicked": false
-  },
-  {
     "id": 10,
-    "name": "spooky-church",
-    "image": "./images/spooky-church_600.jpg",
+    "name": "spider",
+    "image": "./images/spider_600.jpg",
     "clicked": false
   },
   {
@@ -67,8 +67,8 @@
   },
   {
     "id": 12,
-    "name": "witch",
-    "image": "./images/witch_600.jpg",
+    "name": "trick",
+    "image": "./images/trick_600.jpg",
     "clicked": false
   }
 ]
