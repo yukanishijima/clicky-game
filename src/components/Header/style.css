@@ -83,6 +83,7 @@ h1:focus {
 }
 .white {
   animation: 0.5s color-white;
+  color: white;
 }
 @keyframes color-red {
   from {
