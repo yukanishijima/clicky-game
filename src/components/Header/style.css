@@ -38,9 +38,7 @@ h1:focus {
 
 /* Animate neon flicker */
 @keyframes flicker {
-  
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    
     text-shadow:
         -0.2rem -0.2rem 1rem #fff,
         0.2rem 0.2rem 1rem #fff,
@@ -48,8 +46,7 @@ h1:focus {
         0 0 4rem var(--neon-text-color),
         0 0 6rem var(--neon-text-color),
         0 0 8rem var(--neon-text-color),
-        0 0 0rem var(--neon-text-color);
-    
+        0 0 0rem var(--neon-text-color); 
     box-shadow:
         0 0 .5rem #fff,
         inset 0 0 .5rem #fff,
@@ -58,13 +55,35 @@ h1:focus {
         0 0 1rem var(--neon-border-color),
         inset 0 0 2rem var(--neon-border-color);        
   }
-
   20% {        
       text-shadow: none;
       box-shadow: none;
   }    
 }
 
+@-webkit-keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+        -0.2rem -0.2rem 1rem #fff,
+        0.2rem 0.2rem 1rem #fff,
+        0 0 2rem var(--neon-text-color),
+        0 0 4rem var(--neon-text-color),
+        0 0 6rem var(--neon-text-color),
+        0 0 8rem var(--neon-text-color),
+        0 0 0rem var(--neon-text-color);  
+    box-shadow:
+        0 0 .5rem #fff,
+        inset 0 0 .5rem #fff,
+        0 0 2rem var(--neon-border-color),
+        inset 0 0 2rem var(--neon-border-color),
+        0 0 1rem var(--neon-border-color),
+        inset 0 0 2rem var(--neon-border-color);        
+  }
+  20% {        
+      text-shadow: none;
+      box-shadow: none;
+  }    
+}
 
 
 /* message */
@@ -86,24 +105,32 @@ h1:focus {
   color: white;
 }
 @keyframes color-red {
-  from {
-    opacity: 0;}
-  to {
-    color: #f74848;
+  from {opacity: 0;}
+  to {color: #f74848;
+    opacity: 1;}
+}
+@-webkit-keyframes color-red {
+  from {opacity: 0;}
+  to {color: #f74848;
+    opacity: 1;}
+}
+@-webkit-keyframes color-pink {
+  from {opacity: 0;}
+  to {color: #e890d9;
     opacity: 1;}
 }
 @keyframes color-pink {
-  from {
-    opacity: 0;}
-  to {
-    color: #e890d9;
+  from {opacity: 0;}
+  to {color: #e890d9;
     opacity: 1;}
 }
+@-webkit-keyframes color-white {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 @keyframes color-white {
-  from {
-    opacity: 0;}
-  to {
-    opacity: 1;}
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 /* score */

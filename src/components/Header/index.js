@@ -6,7 +6,7 @@ function Header(props) {
     <>
       <h1>Halloween Clicky Game</h1>
       <button type="button" className="modal-btn" data-toggle="modal" data-target="#instructions">?</button>
-      <p id="msg">{props.message}</p>
+      <p id="msg" className={props.color}>{props.message}</p>
 
       <div>
         <span className="score">Score {props.score}</span>

@@ -10,7 +10,8 @@ class App extends Component {
     cards,
     message: "Click any image to begin!",
     score: 0,
-    topScore: 0
+    topScore: 0,
+    color: ""
   };
 
   cardClick = (id) => {
@@ -24,8 +25,10 @@ class App extends Component {
 
     } else {
       console.log(`You Lost!`);
-      this.setState({ message: `You Lost! Click any image to start over.` });
-      this.changeColor("red");
+      this.setState({
+        message: `You Lost! Click any image to start over.`,
+        color: "red"
+      });
       this.shake();
       this.resetGame();
       this.shuffle();
@@ -38,18 +41,19 @@ class App extends Component {
       console.log(`You won!`)
       this.setState({
         score: newScore,
-        message: `Yay, you won! Click any image to start over.`
+        message: `Yay, you won! Click any image to start over.`,
+        color: "pink"
       });
-      this.changeColor("pink");
       this.resetGame();
 
     } else {
       console.log(`You guessed correctly!`);
       this.setState({
         score: newScore,
-        message: `You guessed correctly. Keep guessing!`
-      });
-      this.changeColor();
+        message: `You guessed correctly. Keep guessing!`,
+        color: "white"
+      })
+      setTimeout(() => { this.setState({ color: "" }) }, 500);
     }
 
     if (this.state.topScore < newScore) {
@@ -79,32 +83,10 @@ class App extends Component {
       return newObj;
     });
 
-    console.log(newCards);  //updated cards
-    // console.log(this.state.cards);
     this.setState({
       score: 0,
       cards: newCards
-    });
-    console.log(this.state.cards); //why is it not updated?
-  };
-
-  changeColor = (color) => {
-    document.querySelector("#msg").className = "";
-
-    switch (color) {
-      case "red":
-        document.querySelector("#msg").className = "red";
-        break;
-      case "pink":
-        document.querySelector("#msg").className = "pink";
-        break;
-      default:
-        document.querySelector("#msg").className = "white";
-        setTimeout(removeClass, 500);
-        function removeClass() {
-          document.querySelector("#msg").className = "";
-        };
-    };
+    }, () => console.log(this.state.cards));
   };
 
   shake = () => {
@@ -121,7 +103,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header message={this.state.message} score={this.state.score} topScore={this.state.topScore} />
+        <Header color={this.state.color} message={this.state.message} score={this.state.score} topScore={this.state.topScore} />
 
         <div className="card-container">
           {this.state.cards.map(el => (
