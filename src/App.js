@@ -11,7 +11,8 @@ class App extends Component {
     message: "Click any image to begin!",
     score: 0,
     topScore: 0,
-    color: ""
+    color: "",
+    toggleClickFunc: false,
   };
 
   cardClick = (id) => {
@@ -27,10 +28,10 @@ class App extends Component {
       console.log(`You Lost!`);
       this.setState({
         message: `You Lost! Click any image to start over.`,
-        color: "red"
+        color: "red",
+        toggleClickFunc: true,
       });
       this.shake();
-      this.resetGame();
       this.shuffle();
     }
   };
@@ -42,9 +43,9 @@ class App extends Component {
       this.setState({
         score: newScore,
         message: `Yay, you won! Click any image to start over.`,
-        color: "pink"
+        color: "pink",
+        toggleClickFunc: true,
       });
-      this.resetGame();
 
     } else {
       console.log(`You guessed correctly!`);
@@ -85,7 +86,10 @@ class App extends Component {
 
     this.setState({
       score: 0,
-      cards: newCards
+      cards: newCards,
+      message: "Click any image to begin!",
+      color: "white",
+      toggleClickFunc: false,
     }, () => console.log(this.state.cards));
   };
 
@@ -110,6 +114,8 @@ class App extends Component {
             <Card
               changeColor={this.changeColor}
               cardClick={this.cardClick}
+              resetGame={this.resetGame}
+              toggleClickFunc={this.state.toggleClickFunc}
               id={el.id}
               key={el.id}
               name={el.name}
