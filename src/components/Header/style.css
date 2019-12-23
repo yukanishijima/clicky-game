@@ -167,11 +167,22 @@ body {
   border: 1px solid #dcadc6;
   border-radius: 15px;
 }
+
 .modal-header {
   border-bottom: none;
 }
-.modal-footer {
+#my-modal-footer {
   border-top: none;
+  justify-content: space-between;
+}
+#special-thanks {
+  margin: 0;
+  line-height: 1;
+}
+#special-thanks a {
+  color: #dcadc6;
+  text-decoration: none; 
+  font-size: 0.7em;
 }
 .fas {
   font-size: 0.8em;
@@ -179,6 +190,8 @@ body {
 .got-btn {
   color: black;
   background: #dcadc6;
+  width: 40%;
+  max-width: 80px;
 }
 .got-btn:hover {
   background: #ce78a6;
