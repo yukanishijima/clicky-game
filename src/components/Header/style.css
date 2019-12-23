@@ -171,6 +171,19 @@ body {
 .modal-header {
   border-bottom: none;
 }
+.modal-header button {
+  margin-left: 0;
+}
+.how-to-use {
+  text-align: center;
+  width: 95%;
+}
+.how-to-use > p {
+  font-weight: 400;
+  margin-bottom: 0;
+  font-size: 1.2em;
+}
+
 #my-modal-footer {
   border-top: none;
   justify-content: space-between;

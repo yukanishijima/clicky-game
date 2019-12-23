@@ -19,6 +19,9 @@ function Header(props) {
           <div className="modal-content">
 
             <div className="modal-header">
+              <div className="how-to-use">
+                <p>How to play</p>
+              </div>
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true" className="close-btn">&times;</span>
               </button>
