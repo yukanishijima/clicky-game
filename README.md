@@ -4,7 +4,7 @@ Let's test your memory with the Halloween themed clicky game! Click each of the 
 
 [Live](https://yukanishijima.github.io/clicky-game/)
 
-![Demo](/public/images/demo.gif)
+![Demo](/public/images/newDemo.gif)
 
 ## Functionality
 
